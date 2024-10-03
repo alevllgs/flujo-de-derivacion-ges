@@ -1,0 +1,19 @@
+.center-text {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.big-icon {
+    font-size: 36px;  /* Aumenta el tamaño de los íconos */
+}
+
+.th-observaciones {
+    width: 400%;  /* Ajusta esto según la proporción deseada */
+}
+
+/* Nuevo estilo para los títulos de las columnas */
+.table-title {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;  /* Reduce el tamaño de la letra */
+}
