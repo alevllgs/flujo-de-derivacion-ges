@@ -1,19 +1,48 @@
-.center-text {
-    text-align: center;
-    vertical-align: middle;
+.info-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 5%;
+}
+
+.info-item-titulo{
+    padding-bottom: 2%;  
+}
+
+.info-item {
+    display: flex;
+    margin-bottom: 10px; /* Espacio entre filas */
+}
+
+.info-title {
+    flex: 1;
+    font-weight: bold; /* Negrita para el título */
+    padding-right: 10px; /* Espacio entre la columna del título y el contenido */
+}
+
+.info-content {
+    flex: 4;
+}
+
+.info-texto-rojo{
+    font-weight: bold;
+    color: red;
+    padding-top: 5%;
+}
+
+.info-anexos{
+    padding-top: 5%;
+}
+
+.info-anexos-titulo{
+    padding-bottom: 2%; 
 }
 
 .big-icon {
     font-size: 36px;  /* Aumenta el tamaño de los íconos */
 }
 
-.th-observaciones {
-    width: 400%;  /* Ajusta esto según la proporción deseada */
-}
-
-/* Nuevo estilo para los títulos de las columnas */
-.table-title {
+.center-text {
     text-align: center;
     vertical-align: middle;
-    font-size: 14px;  /* Reduce el tamaño de la letra */
 }

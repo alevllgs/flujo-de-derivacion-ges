@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualización de CSV</title>
+    <title>Garantías Explícitas en Salud (GES)</title>
     <!-- Incluir Bootstrap y Bootstrap Icons desde CDN -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Enlace al archivo CSS externo -->
     <link href="styles.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
-        <h1 class="text-center mb-4">Visualización de Archivo CSV</h1>
+        <h1 class="text-center mb-4">Garantías Explícitas en Salud (GES)</h1>
+
+        <!-- Barra de búsqueda -->
+        <div class="mb-3">
+            <input type="text" id="searchInput" class="form-control" placeholder="Buscar en la tabla...">
+        </div>
+
         <table class="table table-bordered table-striped table-hover" id="tablaDatos">
             <thead class="thead-dark">
                 <tr id="header-row">
@@ -23,9 +31,58 @@
                 <!-- Las filas se llenarán usando JavaScript -->
             </tbody>
         </table>
+        
+
+        <div class="info-container">
+
+            <h3 class="info-item-titulo">Información Adicional</h3>
+
+            <div class="info-item">
+                <div class="info-title">ACCESO:</div>
+                <div class="info-content">Se refiere a la garantía de recibir atención de salud ante cualquier episodio
+                    de enfermedad. (Puede tener restricciones de edad, sexo, tipo de enfermedad, etc)</div>
+            </div>
+            <div class="info-item">
+                <div class="info-title">OPORTUNIDAD:</div>
+                <div class="info-content">Se refiere al tiempo máximo para la entrega de prestaciones cubiertas en el
+                    plan. (Existirán garantías de tiempo para la primera atención y para atención cuando ya existe
+                    diagnóstico.)</div>
+            </div>
+            <div class="info-item">
+                <div class="info-title">CALIDAD:</div>
+                <div class="info-content">Las prestaciones garantizadas en el AUGE/GES deben ser entregadas por un
+                    prestador de salud registrado y acreditado en la Superintendencia de Salud.</div>
+            </div>
+            <div class="info-item">
+                <div class="info-title">PROTECCION FINANCIERA:</div>
+                <div class="info-content">El pago no limita el acceso a los servicios.</div>
+            </div>
+
+
+            <p class="info-texto-rojo">Los prestadores públicos o privados que incumplan la obligación de informar sobre
+                la confirmación de un problema GES, pueden ser sancionados por la Superintendencia de Salud.</p>
+
+        </div>
+
+
+        <div class="info-anexos">
+            <h3 class="info-anexos-titulo">Documentos Anexos</h3>
+            <ul>
+                <li><a href="https://www.superdesalud.gob.cl/normativa/ley-n-19-966-auge/">Ley GES N° 19.966</a></li>
+                <li><a href="https://auge.minsal.cl/storage/e1Ng5cQh3v1Ge4ckFfJrXAzOrIUkUvQlk1zSWnYM.pdf">Decreto GES N°72 2022</a></li>
+                <li><a href="https://leyricartesoto.minsal.cl/laravel-filemanager/files/1/web-auge/Dto.%2053-2019%20SALUD.pdf">ORD MINSAL N°2134. Actualiza Instrucciones y Cumplimiento de Gestión de Garantías y Casos GES en SIGGES</a></li>
+                <li>Norma Técnico Médico Administrativas D°72 (pendiente)</li>
+                <li><a href="https://www.superdesalud.gob.cl/app/uploads/2024/05/formulario-paciente-ges.pdf">Formulario Constancia al pacientes GES</a></li>
+                <li>Trazadoras GES 2023</li>
+            </ul>
+            
+        </div>
     </div>
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
