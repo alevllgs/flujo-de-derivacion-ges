@@ -1,17 +1,48 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 100%;
+}
+
 .info-container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-top: 5%;
+    padding-top: 2%;
 }
 
 .info-item-titulo{
-    padding-bottom: 2%;  
+    padding-bottom: 1%;  
 }
 
 .info-item {
     display: flex;
     margin-bottom: 10px; /* Espacio entre filas */
+}
+
+.titulo-principal{
+    display: flex;
+    width: 100%;
+    padding-bottom: 2%;
+}
+
+.titulo-logo{
+    flex: 1;
+    justify-content: flex-start; /* Alinea a la izquierda */
+    align-items: center; /* Centra verticalmente (opcional) */
+}
+
+.titulo-titulo{
+    flex: 2;
+}
+
+.buscador{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 2%;
 }
 
 .info-title {
@@ -21,21 +52,24 @@
 }
 
 .info-content {
-    flex: 4;
+    flex: 6;
 }
 
 .info-texto-rojo{
     font-weight: bold;
     color: red;
-    padding-top: 5%;
+    padding-top: 2%;
 }
 
 .info-anexos{
-    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 2%;
 }
 
 .info-anexos-titulo{
-    padding-bottom: 2%; 
+    padding-bottom: 1%;  
 }
 
 .big-icon {
@@ -45,4 +79,58 @@
 .center-text {
     text-align: center;
     vertical-align: middle;
+}
+
+table {
+    width: 100%;
+    table-layout: auto;
+}
+
+@media (max-width: 768px) {
+    .table-responsive {
+        display: block;
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        white-space: nowrap; /* Evita el salto de línea dentro de la tabla */
+    }
+}
+
+@media (max-width: 600px) {
+    .info-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .info-item {
+        flex-direction: column;
+    }
+
+    .info-title {
+        padding-bottom: 5px;
+    }
+
+    .big-icon {
+        font-size: 24px; /* Reduces icon size for smaller screens */
+    }
+}
+
+a, button {
+    padding: 10px;
+    font-size: 16px;
+    touch-action: manipulation;
+}
+
+@media (max-width: 768px) {
+    a, button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+img, iframe, .big-icon {
+    max-width: 100%;
+    height: auto;
 }

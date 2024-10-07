@@ -14,27 +14,39 @@
 
 <body>
     <div class="container">
-        <h1 class="text-center mb-4">Garantías Explícitas en Salud (GES)</h1>
 
-        <!-- Barra de búsqueda -->
-        <div class="mb-3">
-            <input type="text" id="searchInput" class="form-control" placeholder="Buscar en la tabla...">
+        <div class="titulo-principal">
+            <div class="titulo-logo">
+                <img src="src/img/logo_dis.jpg" alt="logo">
+            </div>
+            <div class="titulo-titulo">
+                <h1 class="mb-4">Garantías Explícitas en Salud (GES)</h1>
+            </div>
+            
         </div>
-
-        <table class="table table-bordered table-striped table-hover" id="tablaDatos">
-            <thead class="thead-dark">
-                <tr id="header-row">
-                    <!-- Encabezados de columna se llenarán desde el CSV -->
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Las filas se llenarán usando JavaScript -->
-            </tbody>
-        </table>
         
 
-        <div class="info-container">
+        <!-- Barra de búsqueda -->
+        <div class="buscador">
+            <input type="text" id="searchInput" class="form-control" placeholder="Buscar problema de salud...">
+        </div>
 
+        <div class="table-light">
+            <table class="table table-bordered table-striped table-hover" id="tablaDatos">
+                <thead class="thead-dark">
+                    <tr id="header-row">
+
+                    </tr>   <!--  se llenarán usando JavaScript no considerar si da error de escritura -->
+                </thead>
+                
+                
+                <tbody>
+                    <!-- Las filas se llenarán usando JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="info-container">
             <h3 class="info-item-titulo">Información Adicional</h3>
 
             <div class="info-item">
@@ -54,16 +66,13 @@
                     prestador de salud registrado y acreditado en la Superintendencia de Salud.</div>
             </div>
             <div class="info-item">
-                <div class="info-title">PROTECCION FINANCIERA:</div>
+                <div class="info-title">PROTECCIÓN FINANCIERA:</div>
                 <div class="info-content">El pago no limita el acceso a los servicios.</div>
             </div>
 
-
             <p class="info-texto-rojo">Los prestadores públicos o privados que incumplan la obligación de informar sobre
                 la confirmación de un problema GES, pueden ser sancionados por la Superintendencia de Salud.</p>
-
         </div>
-
 
         <div class="info-anexos">
             <h3 class="info-anexos-titulo">Documentos Anexos</h3>
@@ -75,11 +84,8 @@
                 <li><a href="https://www.superdesalud.gob.cl/app/uploads/2024/05/formulario-paciente-ges.pdf">Formulario Constancia al pacientes GES</a></li>
                 <li>Trazadoras GES 2023</li>
             </ul>
-            
         </div>
     </div>
-
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <script src="script.js"></script>
