@@ -14,7 +14,8 @@
 }
 
 .info-item-titulo{
-    padding-bottom: 1%;  
+    padding-bottom: 1%;
+    text-align: justify;
 }
 
 .info-item {

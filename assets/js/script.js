@@ -1,21 +1,21 @@
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('problemas_salud.csv')
-    .then(response => response.text())
-    .then(data => {
-        Papa.parse(data, {
-            delimiter: ";",
-            header: true,
-            skipEmptyLines: true,
-            complete: function(results) {
-                // Encabezados actualizados
-                mostrarEncabezados(['N°', 'Problema de Salud', 'Listado Especifico Prestaciones', 'Flujo SSMO', 'CONFIRMACION APS (Ingreso Hoja APS) [Gestión APS]', 'NOTIFICACIÓN GES APS [Gestión APS]', 'SIC A SIGGES [Gestión APS]', 'SIC SIDRA [Gestión APS]', 'Observaciones']);
-                mostrarDatos(results.data);
-            }
+document.addEventListener('DOMContentLoaded', function () {
+    fetch('data/problemas_salud.csv')
+        .then(response => response.text())
+        .then(data => {
+            Papa.parse(data, {
+                delimiter: ";",
+                header: true,
+                skipEmptyLines: true,
+                complete: function (results) {
+                    // Encabezados actualizados
+                    mostrarEncabezados(['N°', 'Problema de Salud', 'Listado Especifico Prestaciones', 'Flujo SSMO', 'CONFIRMACION APS (Ingreso Hoja APS) [Gestión APS]', 'NOTIFICACIÓN GES APS [Gestión APS]', 'SIC A SIGGES [Gestión APS]', 'SIC SIDRA [Gestión APS]', 'Observaciones']);
+                    mostrarDatos(results.data);
+                }
+            });
         });
-    });
 
     // Función para filtrar la tabla según lo que se escribe en el input de búsqueda
-    document.getElementById('searchInput').addEventListener('input', function() {
+    document.getElementById('searchInput').addEventListener('input', function () {
         const searchValue = this.value.toLowerCase();
         const filas = document.querySelectorAll('#tablaDatos tbody tr');
 
@@ -46,7 +46,8 @@ function mostrarDatos(datos) {
 
         // Problema de Salud (antes "NOMBRE")
         const celdaProblema = nuevaFila.insertCell();
-        celdaProblema.innerHTML = `<a href="${fila['link1']}">${fila['NOMBRE']}</a>`;  // Ahora mostramos el campo NOMBRE bajo el título Problema de Salud
+        celdaProblema.innerHTML = `<a href="${fila['link1']}" style="text-align: justify; text-indent: 0; margin-left: 0; padding-left: 0;">${fila['NOMBRE'].trim()}</a>`;
+        // El método .trim() elimina cualquier espacio extra antes y después del texto
 
         // Listado Especifico Prestaciones (Centrado y con ícono grande)
         const celdaListado = nuevaFila.insertCell();
