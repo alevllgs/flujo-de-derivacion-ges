@@ -1,3 +1,11 @@
+/* Justificar el texto de la celda */
+.justify-text {
+    text-align: justify;
+    text-indent: 0;
+    margin-left: 0;
+    padding-left: 0;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -13,7 +21,7 @@
     padding-top: 2%;
 }
 
-.info-item-titulo{
+.info-item-titulo {
     padding-bottom: 1%;
     text-align: justify;
 }
@@ -23,23 +31,23 @@
     margin-bottom: 10px; /* Espacio entre filas */
 }
 
-.titulo-principal{
+.titulo-principal {
     display: flex;
     width: 100%;
     padding-bottom: 2%;
 }
 
-.titulo-logo{
+.titulo-logo {
     flex: 1;
     justify-content: flex-start; /* Alinea a la izquierda */
     align-items: center; /* Centra verticalmente (opcional) */
 }
 
-.titulo-titulo{
+.titulo-titulo {
     flex: 2;
 }
 
-.buscador{
+.buscador {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -56,21 +64,21 @@
     flex: 6;
 }
 
-.info-texto-rojo{
+.info-texto-rojo {
     font-weight: bold;
     color: red;
     padding-top: 2%;
 }
 
-.info-anexos{
+.info-anexos {
     display: flex;
     flex-direction: column;
     width: 100%;
     padding-top: 2%;
 }
 
-.info-anexos-titulo{
-    padding-bottom: 1%;  
+.info-anexos-titulo {
+    padding-bottom: 1%;
 }
 
 .big-icon {

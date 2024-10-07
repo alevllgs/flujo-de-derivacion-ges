@@ -46,8 +46,7 @@ function mostrarDatos(datos) {
 
         // Problema de Salud (antes "NOMBRE")
         const celdaProblema = nuevaFila.insertCell();
-        celdaProblema.innerHTML = `<a href="${fila['link1']}" style="text-align: justify; text-indent: 0; margin-left: 0; padding-left: 0;">${fila['NOMBRE'].trim()}</a>`;
-        // El método .trim() elimina cualquier espacio extra antes y después del texto
+        celdaProblema.innerHTML = `<a href="${fila['link1']}" class="justify-text">${fila['NOMBRE'].trim()}</a>`;
 
         // Listado Especifico Prestaciones (Centrado y con ícono grande)
         const celdaListado = nuevaFila.insertCell();
