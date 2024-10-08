@@ -28,7 +28,8 @@
 
 .info-item {
     display: flex;
-    margin-bottom: 10px; /* Espacio entre filas */
+    margin-bottom: 10px;
+    /* Espacio entre filas */
 }
 
 .titulo-principal {
@@ -39,8 +40,8 @@
 
 .titulo-logo {
     flex: 1;
-    justify-content: flex-start; /* Alinea a la izquierda */
-    align-items: center; /* Centra verticalmente (opcional) */
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .titulo-titulo {
@@ -56,8 +57,8 @@
 
 .info-title {
     flex: 1;
-    font-weight: bold; /* Negrita para el título */
-    padding-right: 10px; /* Espacio entre la columna del título y el contenido */
+    font-weight: bold;
+    padding-right: 10px;
 }
 
 .info-content {
@@ -82,7 +83,8 @@
 }
 
 .big-icon {
-    font-size: 36px;  /* Aumenta el tamaño de los íconos */
+    font-size: 36px;
+    /* Aumenta el tamaño de los íconos */
 }
 
 .center-text {
@@ -95,51 +97,69 @@ table {
     table-layout: auto;
 }
 
+/* Vista celular */
 @media (max-width: 768px) {
-    .table-responsive {
-        display: block;
-        overflow-x: auto;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .titulo-principal {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .buscador {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 2%;
+    }
+
+    .table-light {
+        width: 100%;
+        overflow-x: auto; /* Permite el desplazamiento horizontal */
     }
 
     table {
-        width: 100%;
-        white-space: nowrap; /* Evita el salto de línea dentro de la tabla */
+        white-space: nowrap; /* Evita que el contenido de las celdas se ajuste en líneas separadas */
+        width: 100%; /* Asegura que la tabla ocupe todo el ancho del contenedor */
     }
-}
 
-@media (max-width: 600px) {
     .info-container {
+        display: flex;
         flex-direction: column;
-        padding: 10px;
+        width: 100%;
     }
 
     .info-item {
+        display: flex;
         flex-direction: column;
+        width: 100%;
+        padding-bottom: 2%;
     }
 
-    .info-title {
-        padding-bottom: 5px;
+    /* Asegura que los botones y enlaces sean fáciles de tocar en móviles */
+    a,
+    button {
+        padding: 10px;
+        font-size: 16px;
+        touch-action: manipulation;
     }
 
-    .big-icon {
-        font-size: 24px; /* Reduces icon size for smaller screens */
-    }
-}
-
-a, button {
-    padding: 10px;
-    font-size: 16px;
-    touch-action: manipulation;
-}
-
-@media (max-width: 768px) {
-    a, button {
+    a,
+    button {
         font-size: 14px;
         padding: 8px;
     }
-}
 
-img, iframe, .big-icon {
-    max-width: 100%;
-    height: auto;
+    img,
+    iframe,
+    .big-icon {
+        max-width: 100%;
+        height: auto;
+    }
 }
