@@ -93,10 +93,74 @@
 }
 
 /* Estilo para pantallas grandes: Mantener el ancho de la tabla completo, incluso al filtrar */
+t/* Asegurar que la tabla respete el ancho de las columnas */
 table {
     width: 100%;
-    table-layout: fixed; /* Asegura que la tabla ocupe todo el ancho disponible */
+    table-layout: fixed; /* Asegura que los anchos de las columnas se respeten */
 }
+
+/* Estilos para el encabezado de la tabla */
+table th {
+    text-align: center; /* Centrar el texto en las celdas del encabezado */
+    vertical-align: middle; /* Asegura que el texto esté verticalmente centrado */
+}
+
+/* Ejemplo para 9 columnas: personaliza el porcentaje para cada una */
+
+/* Primera columna */
+table th:nth-child(1),
+table td:nth-child(1) {
+    width: 4%; /* Asigna 10% a la primera columna */
+}
+
+/* Segunda columna */
+table th:nth-child(2),
+table td:nth-child(2) {
+    width: 20%; /* Asigna 15% a la segunda columna */
+}
+
+/* Tercera columna */
+table th:nth-child(3),
+table td:nth-child(3) {
+    width: 10%; /* Asigna 12% a la tercera columna */
+}
+
+/* Cuarta columna */
+table th:nth-child(4),
+table td:nth-child(4) {
+    width: 10%; /* Asigna 10% a la cuarta columna */
+}
+
+/* Quinta columna */
+table th:nth-child(5),
+table td:nth-child(5) {
+    width: 7%; /* Asigna 10% a la quinta columna */
+}
+
+/* Sexta columna */
+table th:nth-child(6),
+table td:nth-child(6) {
+    width: 7%; /* Asigna 12% a la sexta columna */
+}
+
+/* Séptima columna */
+table th:nth-child(7),
+table td:nth-child(7) {
+    width: 7%; /* Asigna 10% a la séptima columna */
+}
+
+/* Octava columna */
+table th:nth-child(8),
+table td:nth-child(8) {
+    width: 7%; /* Asigna 11% a la octava columna */
+}
+
+/* Novena columna */
+table th:nth-child(9),
+table td:nth-child(9) {
+    width: 28%; /* Asigna 10% a la novena columna */
+}
+
 
 #tablaDatos tbody {
     min-height: 300px; /* Asegurar que la tabla no se encoja cuando se filtren filas */
@@ -167,5 +231,17 @@ table {
     .big-icon {
         max-width: 100%;
         height: auto;
+    }
+}
+
+/* Estilo del título para pantallas grandes */
+.titulo-titulo h1 {
+    font-size: 2rem; /* Tamaño para pantallas grandes */
+}
+
+/* Vista celular: achicar el tamaño del título */
+@media (max-width: 768px) {
+    .titulo-titulo h1 {
+        font-size: 1.5rem; /* Tamaño del título reducido para celulares */
     }
 }
