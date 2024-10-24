@@ -92,9 +92,14 @@
     vertical-align: middle;
 }
 
+/* Estilo para pantallas grandes: Mantener el ancho de la tabla completo, incluso al filtrar */
 table {
     width: 100%;
-    table-layout: auto;
+    table-layout: fixed; /* Asegura que la tabla ocupe todo el ancho disponible */
+}
+
+#tablaDatos tbody {
+    min-height: 300px; /* Asegurar que la tabla no se encoja cuando se filtren filas */
 }
 
 /* Vista celular */
@@ -121,12 +126,13 @@ table {
 
     .table-light {
         width: 100%;
-        overflow-x: auto; /* Permite el desplazamiento horizontal */
+        overflow-x: auto; /* Permite el desplazamiento horizontal en dispositivos móviles */
     }
 
     table {
         white-space: nowrap; /* Evita que el contenido de las celdas se ajuste en líneas separadas */
         width: 100%; /* Asegura que la tabla ocupe todo el ancho del contenedor */
+        table-layout: auto; /* Permite que las columnas sean flexibles en dispositivos móviles */
     }
 
     .info-container {
