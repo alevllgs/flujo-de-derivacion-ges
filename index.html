@@ -15,13 +15,17 @@
 <body>
     <div class="container">
 
-        <div class="titulo-principal">
-            <div class="titulo-logo">
-                <img src="assets/images/logo_dis.jpg" alt="logo">
+        <div class="titulo-principal row">
+            <!-- Primer espacio: logo (1/5 del espacio) -->
+            <div class="titulo-logo col-12 col-md-3 d-flex justify-content-center justify-content-md-start align-items-center">
+                <img src="assets/images/logo_dis.jpg" alt="logo" class="img-fluid">
             </div>
-            <div class="titulo-titulo">
-                <h1 class="mb-4">Garantías Explícitas en Salud (GES)</h1>
+            <!-- Segundo espacio: título (3/5 del espacio) -->
+            <div class="titulo-titulo col-12 col-md-7 d-flex justify-content-center align-items-center">
+                <h1 class="mb-4 text-center">Flujo de referencia y contrarreferencia GES<br>SSMO</h1>
             </div>
+            <!-- Tercer espacio: espacio en blanco (1/5 del espacio, oculto en celular) -->
+            <div class="col-2 d-none d-md-block"></div>
         </div>
 
         <!-- Barra de búsqueda -->
@@ -32,6 +36,7 @@
         <div class="table-light">
             <table class="table table-bordered table-striped table-hover" id="tablaDatos">
                 <thead class="thead-dark">
+                    <tr id="combined-row"></tr> <!-- Nueva fila combinada -->
                     <tr id="header-row"></tr> <!-- Se llenarán usando JavaScript -->
                 </thead>
                 <tbody>
@@ -82,7 +87,7 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script> <!-- Mantén tu script externo aquí -->
 </body>
 
 </html>
