@@ -92,6 +92,14 @@
     vertical-align: middle;
 }
 
+.center-header {
+    text-align: center;
+    background-color: #343a40;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+  
+
 /* Estilo para pantallas grandes: Mantener el ancho de la tabla completo, incluso al filtrar */
 t/* Asegurar que la tabla respete el ancho de las columnas */
 table {
