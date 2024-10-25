@@ -12,11 +12,7 @@ body {
     line-height: 1.5;
 }
 
-/* Asegura que no haya bordes adicionales en las tablas */
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
+
 
 .justify-text {
     text-align: justify;
@@ -141,11 +137,6 @@ t
 
 /* Asegurar que la tabla respete el ancho de las columnas */
 table {
-    border-collapse: collapse;
-    /* Elimina espacios entre celdas */
-    border-spacing: 0;
-    /* Asegura que no haya espacio entre celdas */
-    width: 100%;
     table-layout: fixed;
 }
 
@@ -154,18 +145,11 @@ table th {
     text-align: center;
     /* Centrar el texto en las celdas del encabezado */
     vertical-align: middle;
-    border: none;
-    border-spacing: 0;
+
+    table-layout: fixed;
 }
 
-/* Evitar bordes en todas las celdas para eliminar líneas no deseadas */
-table th,
-table td {
-    border: none;
-    /* Eliminar bordes */
-    padding: 8px;
-    /* Mantener espacio entre contenido */
-}
+
 
 
 /* Ejemplo para 9 columnas: personaliza el porcentaje para cada una */
