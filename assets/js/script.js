@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 complete: function (results) {
                     // Encabezados actualizados
                     mostrarFilaCombinada();  // Añadir la fila combinada
-                    mostrarEncabezados(['N°', 'Problema de Salud', 'Listado Especifico Prestaciones', 'Flujo SSMO', 'CONFIRMACION', 'NOTIFICACIÓN GES', 'SIC A SIGGES', 'SIC SIDRA', 'Observaciones']);
+                    mostrarEncabezados(['N°', 'Problema de Salud', 'Listado Especifico Prestaciones', 'Flujo SSMO', 'Confirmación', 'Notificación GES', 'SIC a SIGGES', 'SIC SIDRA', 'Observaciones']);
                     mostrarDatos(results.data);
                 }
             });

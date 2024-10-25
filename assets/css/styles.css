@@ -8,7 +8,8 @@
 }
 
 body {
-    font-family: Arial, sans-serif; /* Estilo de fuente inicial */
+    font-family: Arial, sans-serif;
+    /* Estilo de fuente inicial */
     line-height: 1.5;
 }
 
@@ -114,8 +115,10 @@ body {
     color: #FFFFFF;
     font-weight: bold;
     border-top: none;
-    border-bottom: none; /* Elimina cualquier borde residual superior o inferior */
-    padding: 0; /* Asegura que no haya relleno en la fila combinada */
+    border-bottom: none;
+    /* Elimina cualquier borde residual superior o inferior */
+    padding: 0;
+    /* Asegura que no haya relleno en la fila combinada */
     margin: 0;
 }
 
@@ -127,7 +130,8 @@ body {
     border-top: none;
     /* Elimina cualquier borde superior */
     border-top: none;
-    border-bottom: none; /* Eliminar bordes de las celdas del encabezado */
+    border-bottom: none;
+    /* Eliminar bordes de las celdas del encabezado */
 }
 
 
