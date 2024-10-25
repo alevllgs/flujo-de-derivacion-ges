@@ -1,4 +1,23 @@
-/* Justificar el texto de la celda */
+/* Reset básico */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Estilo de fuente inicial */
+    line-height: 1.5;
+}
+
+/* Asegura que no haya bordes adicionales en las tablas */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
 .justify-text {
     text-align: justify;
     text-indent: 0;
@@ -92,86 +111,132 @@
     vertical-align: middle;
 }
 
+
 .center-header {
     text-align: center;
-    background-color: #343a40;
+    background-color: #6d747c;
     color: #FFFFFF;
     font-weight: bold;
+    border-top: none;
+    border-bottom: none; /* Elimina cualquier borde residual superior o inferior */
+    padding: 0; /* Asegura que no haya relleno en la fila combinada */
+    margin: 0;
 }
-  
+
+.colspan {
+    background-color: #343a40;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: bold;
+    border-top: none;
+    /* Elimina cualquier borde superior */
+    border-top: none;
+    border-bottom: none; /* Eliminar bordes de las celdas del encabezado */
+}
+
+
 
 /* Estilo para pantallas grandes: Mantener el ancho de la tabla completo, incluso al filtrar */
-t/* Asegurar que la tabla respete el ancho de las columnas */
+t
+
+/* Asegurar que la tabla respete el ancho de las columnas */
 table {
+    border-collapse: collapse;
+    /* Elimina espacios entre celdas */
+    border-spacing: 0;
+    /* Asegura que no haya espacio entre celdas */
     width: 100%;
-    table-layout: fixed; /* Asegura que los anchos de las columnas se respeten */
+    table-layout: fixed;
 }
 
 /* Estilos para el encabezado de la tabla */
 table th {
-    text-align: center; /* Centrar el texto en las celdas del encabezado */
-    vertical-align: middle; /* Asegura que el texto esté verticalmente centrado */
+    text-align: center;
+    /* Centrar el texto en las celdas del encabezado */
+    vertical-align: middle;
+    border: none;
+    border-spacing: 0;
 }
+
+/* Evitar bordes en todas las celdas para eliminar líneas no deseadas */
+table th,
+table td {
+    border: none;
+    /* Eliminar bordes */
+    padding: 8px;
+    /* Mantener espacio entre contenido */
+}
+
 
 /* Ejemplo para 9 columnas: personaliza el porcentaje para cada una */
 
 /* Primera columna */
 table th:nth-child(1),
 table td:nth-child(1) {
-    width: 4%; /* Asigna 10% a la primera columna */
+    width: 4%;
+    /* Asigna 10% a la primera columna */
 }
 
 /* Segunda columna */
 table th:nth-child(2),
 table td:nth-child(2) {
-    width: 20%; /* Asigna 15% a la segunda columna */
+    width: 20%;
+    /* Asigna 15% a la segunda columna */
 }
 
 /* Tercera columna */
 table th:nth-child(3),
 table td:nth-child(3) {
-    width: 10%; /* Asigna 12% a la tercera columna */
+    width: 10%;
+    /* Asigna 12% a la tercera columna */
 }
 
 /* Cuarta columna */
 table th:nth-child(4),
 table td:nth-child(4) {
-    width: 10%; /* Asigna 10% a la cuarta columna */
+    width: 10%;
+    /* Asigna 10% a la cuarta columna */
 }
 
 /* Quinta columna */
 table th:nth-child(5),
 table td:nth-child(5) {
-    width: 7%; /* Asigna 10% a la quinta columna */
+    width: 7%;
+    /* Asigna 10% a la quinta columna */
 }
 
 /* Sexta columna */
 table th:nth-child(6),
 table td:nth-child(6) {
-    width: 7%; /* Asigna 12% a la sexta columna */
+    width: 7%;
+    /* Asigna 12% a la sexta columna */
 }
 
 /* Séptima columna */
 table th:nth-child(7),
 table td:nth-child(7) {
-    width: 7%; /* Asigna 10% a la séptima columna */
+    width: 7%;
+    /* Asigna 10% a la séptima columna */
 }
 
 /* Octava columna */
 table th:nth-child(8),
 table td:nth-child(8) {
-    width: 7%; /* Asigna 11% a la octava columna */
+    width: 7%;
+    /* Asigna 11% a la octava columna */
 }
 
 /* Novena columna */
 table th:nth-child(9),
 table td:nth-child(9) {
-    width: 28%; /* Asigna 10% a la novena columna */
+    width: 28%;
+    /* Asigna 10% a la novena columna */
 }
 
 
 #tablaDatos tbody {
-    min-height: 300px; /* Asegurar que la tabla no se encoja cuando se filtren filas */
+    min-height: 300px;
+    /* Asegurar que la tabla no se encoja cuando se filtren filas */
 }
 
 /* Vista celular */
@@ -198,13 +263,17 @@ table td:nth-child(9) {
 
     .table-light {
         width: 100%;
-        overflow-x: auto; /* Permite el desplazamiento horizontal en dispositivos móviles */
+        overflow-x: auto;
+        /* Permite el desplazamiento horizontal en dispositivos móviles */
     }
 
     table {
-        white-space: nowrap; /* Evita que el contenido de las celdas se ajuste en líneas separadas */
-        width: 100%; /* Asegura que la tabla ocupe todo el ancho del contenedor */
-        table-layout: auto; /* Permite que las columnas sean flexibles en dispositivos móviles */
+        white-space: nowrap;
+        /* Evita que el contenido de las celdas se ajuste en líneas separadas */
+        width: 100%;
+        /* Asegura que la tabla ocupe todo el ancho del contenedor */
+        table-layout: auto;
+        /* Permite que las columnas sean flexibles en dispositivos móviles */
     }
 
     .info-container {
@@ -244,12 +313,14 @@ table td:nth-child(9) {
 
 /* Estilo del título para pantallas grandes */
 .titulo-titulo h1 {
-    font-size: 2rem; /* Tamaño para pantallas grandes */
+    font-size: 2rem;
+    /* Tamaño para pantallas grandes */
 }
 
 /* Vista celular: achicar el tamaño del título */
 @media (max-width: 768px) {
     .titulo-titulo h1 {
-        font-size: 1.5rem; /* Tamaño del título reducido para celulares */
+        font-size: 1.5rem;
+        /* Tamaño del título reducido para celulares */
     }
 }

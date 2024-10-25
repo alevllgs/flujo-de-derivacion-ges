@@ -32,10 +32,13 @@ function mostrarFilaCombinada() {
     const filaCombinada = tablaEncabezado.insertRow(0); // Insertar en la primera posición
 
     // Crear las primeras celdas vacías que no serán combinadas
-    filaCombinada.insertCell().setAttribute('colspan', '3'); // N°, Problema de Salud, Listado Especifico Prestaciones
-    filaCombinada.insertCell().setAttribute('colspan', '1'); // Flujo SSMO
+    const celdaVacia = filaCombinada.insertCell();
+    celdaVacia.setAttribute('colspan', '4'); // N°, Problema de Salud, Listado Especifico Prestaciones
 
-    // Crear la celda combinada
+    // Añadir el texto "Documentación" dentro de la celda combinada
+    celdaVacia.textContent = 'Documentación';
+
+    // Crear la celda combinada para "Gestión APS"
     const celdaGestionAPS = filaCombinada.insertCell();
     celdaGestionAPS.setAttribute('colspan', '4'); // Combina CONFIRMACION APS, NOTIFICACIÓN GES APS, SIC A SIGGES, SIC SIDRA
     celdaGestionAPS.textContent = 'Gestión APS';
@@ -43,6 +46,7 @@ function mostrarFilaCombinada() {
 
     // Añadir una celda vacía para "Observaciones"
     filaCombinada.insertCell().setAttribute('colspan', '1'); // Observaciones
+    filaCombinada.classList.add('colspan');
 }
 
 function mostrarEncabezados(encabezados) {
