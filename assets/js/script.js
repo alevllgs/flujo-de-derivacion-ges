@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 complete: function (results) {
                     // Encabezados actualizados
                     mostrarFilaCombinada();  // Añadir la fila combinada
-                    mostrarEncabezados(['N°', 'Problema de Salud', 'Listado Especifico Prestaciones', 'Flujo SSMO', 'Confirmación', 'Notificación GES', 'SIC a SIGGES', 'SIC SIDRA', 'Observaciones']);
+                    mostrarEncabezados(['N°', 'Problema de Salud', 'Listado Especifico Prestaciones', 'Flujo SSMO', 'Confirmación', 'Notificación GES', 'SIC a SIGGES', 'SIC a TrakCare', 'Observaciones']);
                     mostrarDatos(results.data);
                 }
             });
@@ -101,9 +101,9 @@ function mostrarDatos(datos) {
         celdaSicSigges.classList.add('center-text');
 
         // SIC SIDRA (Centrado)
-        const celdaSicSidra = nuevaFila.insertCell();
-        celdaSicSidra.textContent = fila['SIC SIDRA'];
-        celdaSicSidra.classList.add('center-text');
+        const celdaSicTrakCare = nuevaFila.insertCell();
+        celdaSicTrakCare.textContent = fila['SIC TrakCare'];
+        celdaSicTrakCare.classList.add('center-text');
 
         // Observaciones (Triple espacio)
         const celdaObs = nuevaFila.insertCell();
