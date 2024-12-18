@@ -168,21 +168,21 @@ table td:nth-child(1) {
 /* Segunda columna */
 table th:nth-child(2),
 table td:nth-child(2) {
-    width: 20%;
+    width: 15%;
     /* Asigna 15% a la segunda columna */
 }
 
 /* Tercera columna */
 table th:nth-child(3),
 table td:nth-child(3) {
-    width: 10%;
+    width: 9%;
     /* Asigna 12% a la tercera columna */
 }
 
 /* Cuarta columna */
 table th:nth-child(4),
 table td:nth-child(4) {
-    width: 10%;
+    width: 9%;
     /* Asigna 10% a la cuarta columna */
 }
 
@@ -214,9 +214,16 @@ table td:nth-child(8) {
     /* Asigna 11% a la octava columna */
 }
 
-/* Novena columna */
+/* Octava columna */
 table th:nth-child(9),
 table td:nth-child(9) {
+    width: 7%;
+    /* Asigna 11% a la octava columna */
+}
+
+/* Novena columna */
+table th:nth-child(10),
+table td:nth-child(10) {
     width: 28%;
     /* Asigna 10% a la novena columna */
 }
@@ -225,6 +232,15 @@ table td:nth-child(9) {
 #tablaDatos tbody {
     min-height: 300px;
     /* Asegurar que la tabla no se encoja cuando se filtren filas */
+}
+
+/* Estilo para valores SI y NO */
+.texto-verde {
+    color: green;
+}
+
+.texto-rojo {
+    color: red;
 }
 
 /* Vista celular */
