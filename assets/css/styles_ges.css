@@ -154,8 +154,6 @@ table th {
 }
 
 
-
-
 /* Ejemplo para 9 columnas: personaliza el porcentaje para cada una */
 
 /* Primera columna */
@@ -168,7 +166,7 @@ table td:nth-child(1) {
 /* Segunda columna */
 table th:nth-child(2),
 table td:nth-child(2) {
-    width: 15%;
+    width: 18%;
     /* Asigna 15% a la segunda columna */
 }
 
@@ -224,7 +222,7 @@ table td:nth-child(9) {
 /* Novena columna */
 table th:nth-child(10),
 table td:nth-child(10) {
-    width: 28%;
+    width: 25%;
     /* Asigna 10% a la novena columna */
 }
 
