@@ -69,7 +69,7 @@ function mostrarDatos(datos) {
         celdaListado.classList.add('center-text');
 
         const celdaFlujo = nuevaFila.insertCell();
-        celdaFlujo.innerHTML = `<a href="${fila['link 3']}"><i class="bi bi-file-pdf big-icon"></i></a>`;
+        celdaFlujo.innerHTML = `<a href="${fila['link 3']}" target="_blank" rel="noopener noreferrer"><i class="bi bi-file-pdf big-icon"></i></a>`;
         celdaFlujo.classList.add('center-text');
 
         // Celdas con estilo dinámico
